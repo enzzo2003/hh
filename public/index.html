@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.3/html2canvas.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+<link href="/public/css/style.css" rel="stylesheet">
+</head>
+
+<title>MAPA DE SALA NOTRE DAME</title>
+  
+</head>
+<body>
+    <div class="container">
+    <button id="saveButton">Baixar Mapa-Sala</button>
+    <br>
+    <button id="sheets">Editar Sala </button>
+    <h1 id="student-count"></h1>
+    <div id="customAlert" class="custom-alert">
+      <div class="custom-alert-content">
+        <h3>Pré-visualização</h3>
+        <img id="screenshot" style="width: 100%; height: auto; max-height: 400px; object-fit: contain;" />
+        <div class="custom-alert-actions">
+          <a id="downloadLink" download="mapa-de-sala.png">Baixar imagem</a>
+          <button id="closeAlert">Fechar</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="class-selector">
+      <label for="classSelect">Selecione a turma: </label>
+      <select id="classSelect">
+        <option value="8anoA">8º ano A</option>
+        <option value="8anoB">8º ano B</option>
+       
+        <!-- Adicione mais opções conforme necessário -->
+      </select>
+    </div>
+    <div class="lousa">LOUSA</div>
+    <div class="students-area">
+      <!-- Os quadrados dos alunos serão adicionados aqui dinamicamente com JavaScript -->
+    </div>
+    <div>FUNDO</div>
+  </div>
+
+  <div id="sendModal" class="custom-alert">
+    <div class="custom-alert-content">
+        <h3>Enviar Mapa-de-sala</h3>
+        <div class="custom-alert-body">
+            <label for="nameInput">Email:</label>
+            <input type="text" id="nameInput">
+            <label for="subjectInput">Observação:</label>
+            <input type="text" id="subjectInput">
+            <br>
+            <label for="fileInput">Anexar arquivo:</label>
+            <input type="file" id="fileInput">
+        </div>
+        <div class="custom-alert-actions">
+            <button id="cancelButton">Cancelar</button>
+            <button id="sendButton">Enviar</button>
+        </div>
+    </div>
+</div>
+  <script src="/public/js/app.js"></script>
+  <script src="/public/js/saveprogress.js"></script>
+</body>
+</html>

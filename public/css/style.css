@@ -1,0 +1,196 @@
+  body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .class-selector {
+      margin: 20px;
+    }
+    .students-area {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* Define o número de colunas */
+      gap: 15px; /* Espaçamento entre os quadrados */
+      width: 1150px;
+      border: 1px solid #1692f8;
+      padding: 10px;
+    }
+        .student {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 190px;
+    height: 120px;
+    background-color: #1f6ca0;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    border: 10px;
+    border-radius: 5px;
+    }
+
+    .invisible {
+  width: 0;
+  height: 0;
+  background: rgb(0, 255, 76);
+}
+.custom-alert {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.custom-alert-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px; /* Altere a largura máxima aqui */
+}
+
+.custom-alert-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.student-image {
+  pointer-events: none;
+  width: 70px;
+height: 70px; 
+border: 20px;
+border-radius: 100%;
+  object-fit: cover;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.student-name {
+  display: block;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 600;
+}
+/* CONFIGURAÇAO DO MODAL ENVIAR MAPA DE SALA*/
+#sendModal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#sendModal .custom-alert-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+}
+
+#sendModal .custom-alert-content h3 {
+  margin-top: 0;
+}
+
+#sendModal .custom-alert-body {
+  margin-top: 20px;
+}
+
+#sendModal .custom-alert-body label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#sendModal .custom-alert-body input[type="text"],
+#sendModal .custom-alert-body input[type="file"] {
+  display: block;
+  margin-bottom: 15px;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+#sendModal .custom-alert-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#sendModal .custom-alert-actions button {
+  padding: 10px;
+  margin-right: 10px;
+  background-color: #1692f8;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#sendModal .custom-alert-actions button:hover { 
+  background-color: #0071d1;
+}
+#downloadLink {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #135a94;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#downloadLink:hover {
+  background-color: #0071d1;
+}
+#file-upload-button{
+  display: inline-block;
+  padding: 10px 20px;
+  color: #106e94;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+#student-count{
+font-size: 1.3rem  ;
+}
+.lousa{
+  font-size: 24px;
+  font-weight: bold;
+  color: #1692f8;
+  margin-bottom: 10px;
+  text-align: center;
+}
+/*Lembrando que este empty-spot e a configuraçao INICIAL quando carregado da planilha , apos mexermos ele ira ser setado com as CORES DO JS*/
+/*na funçao HandleDrop do app.js la depois que movemos o empty-spot ele ira definir via JS*/
+.empty-spot {
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  font-weight: 600;
+  
+}
